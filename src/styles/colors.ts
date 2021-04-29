@@ -4,5 +4,6 @@ export default {
     backgroundColor: '#18ADF2',
     flatBackground:'#18ADF2',
     selectItens: '#18ADF2',
-    filter: '#EAEAEA'
+    filter: '#EAEAEA',
+    bgButton: '#9BD7F3'
 }

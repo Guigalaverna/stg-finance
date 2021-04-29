@@ -1,13 +1,16 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 
 import { useFonts,
-        Jost_400Regular,
+  Jost_400Regular,
         Jost_600SemiBold,
         Jost_700Bold } 
 from '@expo-google-fonts/jost';
         
-import {Login} from './src/pages/Login';
+import { AuthRoutes } from './src/routes/auth.routes';
+import { NavigationContainer } from '@react-navigation/native';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({
@@ -18,8 +21,10 @@ export default function App() {
 
   if(!fontsLoaded)
     return <AppLoading/>
-    
+
   return (
-    <Login/>
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
   );
 }
